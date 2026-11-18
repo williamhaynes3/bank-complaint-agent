@@ -12,7 +12,7 @@ client = anthropic.Anthropic()
 class TriageResult(BaseModel):
     issue_category: str
     urgency: Literal["low", "medium", "high"]
-    reg_flag: Literal["Reg E", "Reg DD", "Reg Z", "UDAPP", "None"]
+    reg_flag: Literal["Reg E", "Reg DD", "Reg Z", "UDAAP", "None"]
     route_to_human: bool
     next_step: str
 
@@ -40,6 +40,7 @@ for cid, company, issue, sub_issue in rows:
         messages=[{"role": "user", "content": prompt}],
     )
 
-raw = next(b.text for b in msg.content if hasattr(b, "text")).strip().removeprefix("```json").removesuffix("```").strip()    result = TriageResult.model_validate_json(raw)
+    raw = next(b.text for b in msg.content if hasattr(b, "text")).strip().removeprefix("```json").removesuffix("```").strip()
+    result = TriageResult.model_validate_json(raw)
     print(cid, result.urgency, result.reg_flag, result.route_to_human)
     print("   ", result.next_step)

@@ -33,6 +33,10 @@ for cid, company, issue, sub_issue, urgency, reg, human, notes in golden:
     Rules:
     - Deposits and withdrawals: default Reg E when money movement is involved (unauthorized, missing, or delayed funds).
     - Account closures: UDAAP when the customer claims unfair closure or no notice.
+    Urgency:
+    - high: unauthorized transactions, can't stop withdrawals, account opened without consent, money taken on the wrong day or for the wrong amount, funds not handled as instructed, and problems making or receiving payments.
+    - medium: debit or ATM card problems, account closures (by the customer or the bank), problems accessing an account, and overdraft fees.
+    - low: deposits and withdrawals, opening an account, banking errors, late or NSF fees, and advertised-terms complaints.
     """
     msg = client.messages.create(
         model="claude-sonnet-5-5",
