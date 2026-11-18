@@ -35,12 +35,11 @@ for cid, company, issue, sub_issue in rows:
     """
 
     msg = client.messages.create(
-        model="claude-sonnet-4-5",
+        model="claude-sonnet-5-5",
         max_tokens=300,
         messages=[{"role": "user", "content": prompt}],
     )
 
-    raw = msg.content[0].text.strip().removeprefix("```json").removesuffix("```").strip()
-    result = TriageResult.model_validate_json(raw)
+raw = next(b.text for b in msg.content if hasattr(b, "text")).strip().removeprefix("```json").removesuffix("```").strip()    result = TriageResult.model_validate_json(raw)
     print(cid, result.urgency, result.reg_flag, result.route_to_human)
     print("   ", result.next_step)
