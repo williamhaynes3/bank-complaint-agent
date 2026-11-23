@@ -1,0 +1,16 @@
+MISS urgency 23559688: you said medium, Claude said high (Transaction was not authorized)
+MISS reg 22961890: you said Reg DD, Claude said UDAAP (Deposits and withdrawals)
+MISS urgency 22986706: you said medium, Claude said high (Deposits and withdrawals)
+MISS reg 22752960: you said UDAAP, Claude said None (Can't close your account)
+MISS urgency 22760485: you said high, Claude said medium (Company closed your account)
+MISS urgency 23058185: you said medium, Claude said high (Company closed your account)
+MISS reg 23058185: you said UDAAP, Claude said Reg E (Company closed your account)
+MISS reg 23882451: you said None, Claude said Reg DD (Fee problem)
+MISS urgency 22792043: you said high, Claude said medium (Problem accessing account)
+MISS reg 23673711: you said None, Claude said Reg DD (Fees charged for closing account)
+MISS urgency 23042589: you said low, Claude said medium (Money was taken from your account on the wrong day or for the wrong amount)
+MISS reg 23343227: you said None, Claude said Reg DD (Cashing a check)
+
+urgency: 59/65
+reg: 59/65
+human: 65/65

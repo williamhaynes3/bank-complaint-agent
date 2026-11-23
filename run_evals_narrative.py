@@ -19,6 +19,7 @@ When the story and the dropdown disagree, the story controls. Do not use a sub-i
 
 Urgency:
 - high: funds the customer needs now are missing, frozen, or inaccessible (rent, payroll, mortgage, food, medical, or essentially all of their money); unauthorized access is uncontained; a large unreimbursed loss remains (about $800 or more, or a smaller amount that is clearly their last funds); or imminent harm (eviction, missed mortgage today, no food). A large loss can still be high even if the customer initiated the payment.
+- high also (bank-risk rules, Will 2026-11-23): fraud, identity theft, or an account opened without consent involving a business account, even if frozen with little loss so far; a vulnerable customer (disabled, low income, older American, or servicemember) who has lost access to their account or had it closed, even over a small fee.
 - medium: a real unresolved problem that is not an immediate livelihood crisis, including a denied or pending dispute without an essential-expense crisis, modest fees or a modest negative balance, identity-theft account opening with little current loss of the customer's own funds, inability to close an account that may still accrue fees, adverse banking-history reporting after the balance was paid, or a deposit hold / delayed paycheck with inconvenience or living-expense pressure but no imminent harm.
 - low: a promotional bonus or advertised term was not honored and no funds were seized; an after-the-fact fee-waiver request with the account otherwise usable; or a small fee or merchant-billing issue with no hardship.
 
@@ -27,6 +28,7 @@ Reg_Flag — pick one primary flag for the core harm in the narrative:
 - Reg DD: advertised deposit-account terms, APY, or bonuses not honored; available-balance representations that caused surprise NSF or overdraft fees; fee issues that turn on how the product or fee was disclosed.
 - Reg Z: a credit product, line of credit, or overdraft line of credit attached to the deposit relationship; an unwanted credit product the customer cannot remove.
 - UDAAP: account opened without consent; unfair account closure; unfair withholding of the customer's own funds, including a 100% hold plus a refusal to release living expenses or return the check; deceptive sales, forced add-on products, or bait-and-switch. Use UDAAP when unfairness or deception is the core harm.
+- Small-dollar fee disputes (roughly under $100 total) stay Reg DD even when the customer says they were lied to or misled; use UDAAP only for a clear pattern of deception or material harm.
 - None: ordinary service or operational failures with no clear regulatory hook; a merchant billing fight on a purchase the customer authorized (overcharge, a fee that was supposed to be waived, defective goods, or a refund the merchant promised and did not pay) — that is None, not Reg E; payments the customer initiated even if a third party tricked them into sending the money (authorized-but-scammed), unless the bank's denial practice itself is the core unfairness.
 
 Route_To_Human:
