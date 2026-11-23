@@ -1,0 +1,19 @@
+MISS urgency 23559688: you said medium, Claude said high (Transaction was not authorized)
+MISS reg 22760075: you said None, Claude said UDAAP (Cashing a check)
+MISS reg 22961890: you said Reg DD, Claude said UDAAP (Deposits and withdrawals)
+MISS urgency 22986706: you said medium, Claude said high (Deposits and withdrawals)
+MISS urgency 22760485: you said high, Claude said medium (Company closed your account)
+MISS reg 23058185: you said UDAAP, Claude said Reg E (Company closed your account)
+MISS urgency 23484039: you said high, Claude said medium (Non-sufficient funds and associated fees)
+MISS urgency 23882451: you said low, Claude said medium (Fee problem)
+MISS human 23537280: you said True, Claude said False (Problem using a debit or ATM card)
+MISS urgency 24148120: you said high, Claude said medium (Account opened without my consent or knowledge)
+MISS urgency 23121634: you said low, Claude said medium (Fee problem)
+MISS reg 23121634: you said Reg DD, Claude said UDAAP (Fee problem)
+MISS human 23121634: you said False, Claude said True (Fee problem)
+MISS urgency 23042589: you said low, Claude said medium (Money was taken from your account on the wrong day or for the wrong amount)
+MISS urgency 23712224: you said low, Claude said medium (Problem using a debit or ATM card)
+
+urgency: 56/65
+reg: 61/65
+human: 63/65
