@@ -11,7 +11,8 @@ load_dotenv()
 client = anthropic.Anthropic()
 
 ROOT = Path(__file__).resolve().parent
-GOLDEN_PATH = ROOT / "golden_narratives.csv"
+import os
+GOLDEN_PATH = ROOT / os.environ.get("GOLDEN", "golden_narratives.csv")
 
 GUIDANCE = """
 Judge from the customer's written narrative, not from the issue or sub-issue name alone.
@@ -29,6 +30,7 @@ Reg_Flag — pick one primary flag for the core harm in the narrative:
 - Reg Z: a credit product, line of credit, or overdraft line of credit attached to the deposit relationship; an unwanted credit product the customer cannot remove.
 - UDAAP: account opened without consent; unfair account closure; unfair withholding of the customer's own funds, including a 100% hold plus a refusal to release living expenses or return the check; deceptive sales, forced add-on products, or bait-and-switch. Use UDAAP when unfairness or deception is the core harm.
 - Small-dollar fee disputes (roughly under $100 total) stay Reg DD even when the customer says they were lied to or misled; use UDAAP only for a clear pattern of deception or material harm.
+- Reg B: refusing, limiting, or treating a customer differently based on who they appear to be (race, sex, age, national origin, or similar), including a teller's biased refusal of service. Use Reg B over UDAAP when possible discrimination is the core harm.
 - None: ordinary service or operational failures with no clear regulatory hook; a merchant billing fight on a purchase the customer authorized (overcharge, a fee that was supposed to be waived, defective goods, or a refund the merchant promised and did not pay) — that is None, not Reg E; payments the customer initiated even if a third party tricked them into sending the money (authorized-but-scammed), unless the bank's denial practice itself is the core unfairness.
 
 Route_To_Human:
@@ -41,7 +43,7 @@ Route_To_Human:
 class TriageResult(BaseModel):
     issue_category: str
     urgency: Literal["low", "medium", "high"]
-    reg_flag: Literal["Reg E", "Reg DD", "Reg Z", "UDAAP", "None"]
+    reg_flag: Literal["Reg E", "Reg DD", "Reg Z", "Reg B", "UDAAP", "None"]
     route_to_human: bool
     next_step: str
 

@@ -140,3 +140,4 @@ The 10 `YES` rows were the closest calls in the first draft and were reviewed by
 - Urgency high: fraud, identity theft, or an unauthorized account involving a business account, even if frozen with little loss so far. Reason: business relationships are high visibility.
 - Urgency high: a vulnerable customer (disabled, low income, older American, servicemember) who has lost access to their account or had it closed, even over a small fee. Reason: reputational risk.
 - Reg flag: small-dollar fee disputes (roughly under $100) stay Reg DD even when the customer says they were lied to; UDAAP needs a clear pattern of deception or material harm.
+- Reg flag: Reg B added 2026-11-23 for possible discrimination in service (Will's call on holdout #4, Regions).

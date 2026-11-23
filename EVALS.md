@@ -26,3 +26,12 @@ Raw output: eval-run-2026-11-23-s2.txt
 - high-urgency cases caught: 26/28 (was 25; misses 22760485, 22792043)
 - Fixed: 24148120, 23484039, 23121634, 23537280. New reg misses: 3 "None" fee/check cases now tagged Reg DD (side effect of the small-fee rule).
 - Single run; model output varies run to run, so a 1-2 case swing may be noise.
+
+## Holdout test — 15 unseen complaints (2026-11-23)
+Set: holdout_narratives.csv (CCDB_Export_16_March_2026, random sample, labeled by Will before scoring). Reg B added as a flag. Raw: eval-run-2026-11-23-holdout.txt
+- urgency: 9/15 (60%) — bar 85%, FAIL
+- reg: 12/15 (80%) — bar 90%, FAIL
+- human: 13/15 (87%) — bar 95%, FAIL
+- high-urgency caught: 4/6 (67%) — bar 95%, FAIL (missed 20499217 Chase lockout, 20134092 Regions possible bias)
+- Pattern: 3 lows over-called as medium; both missed highs were Will judgment calls not yet written into the rules.
+- Same-day re-run on the original 65 (with Reg B): urgency 57, reg 56, human 63 (1 parse failure). Versus the earlier run: 59/59/65. Run-to-run noise is about 2-3 cases.

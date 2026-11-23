@@ -1,0 +1,15 @@
+MISS urgency 20730096: you said low, Claude said medium (Problem using a debit or ATM card)
+MISS urgency 20694618: you said medium, Claude said high (Problem accessing account)
+MISS reg 20694618: you said None, Claude said UDAAP (Problem accessing account)
+MISS urgency 20499217: you said high, Claude said medium (Problem accessing account)
+MISS reg 20499217: you said Reg Z, Claude said UDAAP (Problem accessing account)
+MISS urgency 20134092: you said high, Claude said medium (Cashing a check)
+MISS reg 20005288: you said None, Claude said UDAAP (Deposits and withdrawals)
+MISS urgency 20046783: you said low, Claude said medium (Deposits and withdrawals)
+MISS urgency 19950174: you said low, Claude said medium (Funds not handled or disbursed as instructed)
+MISS human 19950174: you said False, Claude said True (Funds not handled or disbursed as instructed)
+MISS human 20035876: you said False, Claude said True (Funds not handled or disbursed as instructed)
+
+urgency: 9/15
+reg: 12/15
+human: 13/15

@@ -24,3 +24,8 @@ Note: rules 1 and 2 add bank-risk (relationship, reputation) to urgency, not onl
 - Reg flag: 90% (now 61/65 = 94%, pass)
 - Route to human: 95% (now 63/65 = 97%, pass)
 Missing a real crisis is the costliest error, so high-urgency catch has the strictest bar.
+
+## 2026-11-23 — Holdout labels and Reg B
+- Will labeled 15 unseen complaints. Changed from suggestions: #3 Chase months-long lockout to high and Reg Z; #4 Regions refusal to high and Reg B; #5 SoFi stays None (plain ops failure); #7 Chime stays UDAAP.
+- Added Reg B (possible discrimination in service) as an allowed flag.
+- Finding: the agent fails every bar on unseen complaints; the 65-case scores were inflated by tuning on the same set.
